@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test:e2e": "cypress open",
+    "test:e2e:run": "concurrently \"npm run start\" \"cypress run\"",
+    "start-frontend": "cd frontend && npm start",
+    "start-backend": "cd backend && npm start",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\""
+  },
+  "devDependencies": {
+    "cypress": "^15.7.1"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

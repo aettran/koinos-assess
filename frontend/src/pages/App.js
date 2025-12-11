@@ -3,12 +3,13 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Items from './Items';
 import ItemDetail from './ItemDetail';
 import { DataProvider } from '../state/DataContext';
+import './App.css';
 
 function App() {
   return (
     <DataProvider>
-      <nav style={{padding: 16, borderBottom: '1px solid #ddd'}}>
-        <Link to="/">Items</Link>
+      <nav className="navbar">
+        <Link to="/" className="navbar-link">Items</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Items />} />
